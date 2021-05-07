@@ -16,7 +16,7 @@ app.get("/github", async (_, res) => {
     array.push(getOnlyCSharp[i]);
   }
 
-  res.json(array);
+  res.json({ ...array });
 });
 
 app.listen(process.env.PORT || 3000);
